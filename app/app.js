@@ -4,9 +4,10 @@ import loadInitializers from 'ember-load-initializers';
 import config from './config/environment';
 
 const App = Application.extend({
+  rootElement: '#simple-practice-widget',
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver
+  Resolver,
 });
 
 loadInitializers(App, config.modulePrefix);
