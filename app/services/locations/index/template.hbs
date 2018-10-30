@@ -1,0 +1,15 @@
+<ul>
+  {{#each model.locations as |item|}}
+    {{#link-to 'services.locations.location' model.serviceId item.id}}
+      <li>
+        city: {{item.city}}<br />
+        isVideo: {{if item.isVideo  'TRUE'  'FALSE'}}<br />
+        name: {{item.name}}<br />
+        phone: {{item.phone}}<br />
+        state: {{item.state}}<br />
+        street: {{item.street}}<br />
+        zip: {{item.zip}}
+      </li>
+    {{/link-to}}
+  {{/each}}
+</ul>

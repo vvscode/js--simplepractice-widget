@@ -8,7 +8,9 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('services', { path: '/' }, function() {
-    this.route('locations', { path: 'service/:id' });
+    this.route('locations', { path: 'service/:serviceId' }, function() {
+      this.route('location', { path: 'location/:locationId' });
+    });
   });
 });
 

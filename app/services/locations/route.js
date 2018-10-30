@@ -7,7 +7,7 @@ export default Route.extend({
     return $.getJSON(
       `${widgetConfig.baseUrl}/client-portal-api/offices?Accept=application/vn
 d.api+json&filter[clinicianId]=${widgetConfig.clinicalId}&filter[cptCodeId]=${
-        params.id
+        params.serviceId
       }`,
     ).then(response =>
       response.data.map(el => ({
