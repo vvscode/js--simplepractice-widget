@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'simplepractice-widget',
     environment,
     rootURL: '/',
-    locationType: 'hash', // none
+    locationType: 'none',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
