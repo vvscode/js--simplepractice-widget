@@ -6,6 +6,7 @@ import widgetConfig from '../../../widgetConfig';
 export default Component.extend({
   classNames: ['services--progress-stepper'],
   router: inject(),
+  store: inject(),
 
   serviceId: null,
   locationId: null,
@@ -21,17 +22,29 @@ export default Component.extend({
 
       return [
         {
-          title: `Clinician: ${this.get('clinicName')}`,
+          title: `Clinician`,
+          subtitle: this.get('clinicName'),
           passed: true,
         },
-        { title: `Select a service`, passed: true, link: ['services'] },
+        {
+          title: `Select a service`,
+          subtitle: serviceId
+            ? this.store
+                .peekRecord('clinical-provider', serviceId)
+                .get('description')
+            : '',
+          passed: true,
+          link: ['services'],
+        },
         {
           title: `Select  a location`,
+          subtitle: '',
           passed: currentRouteName.includes('locations'),
           link: ['services.locations', serviceId],
         },
         {
           title: `Select date and timet`,
+          subtitle: '',
           passed: currentRouteName.endsWith('location'),
         },
         { title: `Your information` },

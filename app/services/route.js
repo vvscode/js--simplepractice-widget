@@ -16,7 +16,6 @@ export default Route.extend({
           'locationId',
         ),
       };
-      console.log(props);
       this.controller.setProperties(props);
       return true; // Bubble the didTransition event
     },

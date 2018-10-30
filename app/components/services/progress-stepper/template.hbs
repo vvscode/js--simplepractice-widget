@@ -2,6 +2,13 @@
   {{#each items as |item|}}
     <li class=" step {{if item.passed 'passed' ''}}">
       {{#if (and item.passed item.link)}}
-        <span onclick={{action "navigateTo" item.link}}> {{item.title}}</span>
-      {{else}} {{item.title}} {{/if}} </li>
+        <span class="title" onclick={{action "navigateTo" item.link}}>{{item.title}}</span>
+      {{else}}
+        <span class="title">{{item.title}}</span>
+      {{/if}}
+      {{#if item.subtitle}}
+        <br />
+        <span class="subtitle">{{item.subtitle}}</span>
+      {{/if}}
+    </li>
   {{/each}} </ol>
