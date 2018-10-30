@@ -7,7 +7,7 @@
         <h5 class="card-title">{{item.name}}</h5>
         <p class="card-text">{{item.state}} {{item.city}} {{item.street}}, {{item.zip}}</p>
         <p class="card-text">{{item.phone}}</p>
-        {{#link-to 'services.locations.location' model.serviceId item.id class="btn btn-primary"}}
+        {{#link-to 'services.locations.location' model.serviceId item.id class="btn btn-primary btn-block"}}
           Select
         {{/link-to}}
       </div>
