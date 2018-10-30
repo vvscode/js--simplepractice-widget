@@ -1,0 +1,13 @@
+.__services__progress-stepper__b66a2 .step {
+  opacity: 0.3;
+}
+
+.__services__progress-stepper__b66a2 .step.passed {
+  cursor: pointer;
+  opacity: 1;
+  font-weight: bold;
+}
+
+.__services__progress-stepper__b66a2 .subtitle {
+  color: gray;
+}
