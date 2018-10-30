@@ -3,6 +3,7 @@
 }
 
 .step.passed {
+  cursor: pointer;
   opacity: 1;
   font-weight: bold;
 }
