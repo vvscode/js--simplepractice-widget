@@ -25,6 +25,7 @@ export default Component.extend({
           title: `Clinician`,
           subtitle: this.get('clinicName'),
           passed: true,
+          link: ['services'],
         },
         {
           title: `Select a service`,
