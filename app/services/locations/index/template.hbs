@@ -1,15 +1,16 @@
-<ul>
+<div class="d-flex flex-row">
   {{#each model.locations as |item|}}
-    {{#link-to 'services.locations.location' model.serviceId item.id}}
-      <li>
-        city: {{item.city}}<br />
-        isVideo: {{if item.isVideo  'TRUE'  'FALSE'}}<br />
-        name: {{item.name}}<br />
-        phone: {{item.phone}}<br />
-        state: {{item.state}}<br />
-        street: {{item.street}}<br />
-        zip: {{item.zip}}
-      </li>
-    {{/link-to}}
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://maps.googleapis.com/maps/api/staticmap?center={{concat item.street ' ' item.city ', ' item.state}}&zoom=13&size=600x300&maptype=roadmap&key=AIzaSyDHezCYmpwBRLMCBmqt55TQDP3430Zrt-U"
+        alt="Place map here">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text">{{item.state}} {{item.city}} {{item.street}}, {{item.zip}}</p>
+        <p class="card-text">{{item.phone}}</p>
+        {{#link-to 'services.locations.location' model.serviceId item.id class="btn btn-primary"}}
+          Select
+        {{/link-to}}
+      </div>
+    </div>
   {{/each}}
-</ul>
+</div>

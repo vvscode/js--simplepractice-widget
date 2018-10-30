@@ -1,7 +1,8 @@
-<ul>
-  {{#each model as |item|}}
-    <li>
-      {{#link-to 'services.locations' item.id}}{{item.description}}{{/link-to}}
-    </li>
-  {{/each}}
-</ul>
+{{#each model as |item|}}
+  <div class="card">
+    <div class="card-body">
+      <span class="card-title">{{item.description}}</span>
+      {{#link-to 'services.locations' item.id class="btn btn-primary float-right"}}Select{{/link-to}}
+    </div>
+  </div>
+{{/each}}

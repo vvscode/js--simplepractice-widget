@@ -1,9 +1,13 @@
-<div class="services-container">
-  <div class="services-container__navigation-column">
-    {{services/progress-stepper
-     serviceId=serviceId
-     locationId=locationId
-     }}
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+      {{services/progress-stepper
+         serviceId=serviceId
+         locationId=locationId
+         }}
+    </div>
+    <div class="col-10">
+      {{outlet}}
+    </div>
   </div>
-  <div class="services-container__content-column">{{outlet}}</div>
 </div>
