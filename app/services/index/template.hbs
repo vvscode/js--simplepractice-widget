@@ -1,6 +1,7 @@
 <ul>
   {{#each model as |item|}}
     <li>
+      {{#link-to 'services.locations' item.id}}{{item.description}}{{/link-to}}
     </li>
   {{/each}}
 </ul>

@@ -2,20 +2,14 @@ module.exports = {
   root: true,
   parserOptions: {
     ecmaVersion: 2017,
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: [
-    'ember'
-  ],
-  extends: [
-    'eslint:recommended',
-    'plugin:ember/recommended'
-  ],
+  plugins: ['ember'],
+  extends: ['eslint:recommended', 'plugin:ember/recommended'],
   env: {
-    browser: true
+    browser: true,
   },
-  rules: {
-  },
+  rules: {},
   overrides: [
     // node files
     {
@@ -23,16 +17,19 @@ module.exports = {
         'ember-cli-build.js',
         'testem.js',
         'config/**/*.js',
-        'lib/*/index.js'
+        'lib/*/index.js',
       ],
       parserOptions: {
         sourceType: 'script',
-        ecmaVersion: 2015
+        ecmaVersion: 2015,
+        ecmaFeatures: {
+          experimentalObjectRestSpread: true,
+        },
       },
       env: {
         browser: false,
-        node: true
-      }
-    }
-  ]
+        node: true,
+      },
+    },
+  ],
 };
