@@ -1,0 +1,13 @@
+@import "pod-styles.css";
+
+.services-container {
+  display: flex;
+}
+
+.services-container__navigation-column {
+
+}
+
+.services-container__content-column {
+
+}

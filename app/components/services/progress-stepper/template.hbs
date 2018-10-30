@@ -1,0 +1,11 @@
+<ol>
+  {{#each items as |item|}}
+    <li class=" step {{if item.passed 'passed' ''}}">
+      {{#if (and item.passed item.link)}}
+        {{#link-to item.link}}{{item.title}}{{/link-to}}
+      {{else}}
+        {{item.title}}
+      {{/if}}
+    </li>
+  {{/each}}
+</ol>

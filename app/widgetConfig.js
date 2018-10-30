@@ -8,4 +8,5 @@ export default {
   el: EL_SELECTOR,
   baseUrl: `https://cors.io/?${baseUrl}`,
   clinicalId,
+  clinicalName: 'Rob Gross, MFT', // I didn't guess where should I get this name - looks like some other api
 };
